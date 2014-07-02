@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <BOOST_DIR>C:\sdk\Boost\boost_1_54_0</BOOST_DIR>
+    <BOOST_LIB>$(BOOST_DIR)\x86\lib</BOOST_LIB>
+    <BOOST_INCLUDE>$(BOOST_DIR)</BOOST_INCLUDE>
+    <PYTHON_DIR>C:\Python\Python27\x32</PYTHON_DIR>
+    <PYTHON_LIB>$(PYTHON_DIR)\libs</PYTHON_LIB>
+    <PYTHON_INCLUDE>$(PYTHON_DIR)\include</PYTHON_INCLUDE>
+  </PropertyGroup>
+  <PropertyGroup>
+    <IncludePath>$(BOOST_INCLUDE);$(PYTHON_INCLUDE);$(IncludePath);</IncludePath>
+    <LibraryPath>$(SolutionDir)$(Configuration);$(PYTHON_LIB);$(BOOST_LIB);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="BOOST_DIR">
+      <Value>$(BOOST_DIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="BOOST_LIB">
+      <Value>$(BOOST_LIB)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="BOOST_INCLUDE">
+      <Value>$(BOOST_INCLUDE)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="PYTHON_DIR">
+      <Value>$(PYTHON_DIR)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="PYTHON_LIB">
+      <Value>$(PYTHON_LIB)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="PYTHON_INCLUDE">
+      <Value>$(PYTHON_INCLUDE)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
