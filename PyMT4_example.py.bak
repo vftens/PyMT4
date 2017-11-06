@@ -97,11 +97,11 @@ def OnOrderHandler(ticket):
         OrderModify(ticket,0.0,newStop,0.0,0,0)
     
 def OnTickHandler(symbol,bid,ask):
-    print(symbol,bid,ask)
+    print symbol,bid,ask
 
 if __name__ == "__main__":
     
-    print(Connect())
+    print Connect()
     OnOrderManager.Initialize()
     RegisterOnOrderHandler(OnOrderHandler)
     RegisterOnTickHandler("*",OnTickHandler)
